@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 33
+      "likes": "41"
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 14
+      "likes": "18"
     },
     {
       "id": 3,
@@ -47,6 +47,30 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Ducky",
+      "image": "https://i.pinimg.com/736x/2e/29/e2/2e29e2a25d2bfce83e3f1ddcb8ddb9c1.jpg",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "Piggy",
+      "image": "https://i.pinimg.com/originals/02/05/46/020546723cbdce89ad43a0d9e4b6c102.jpg",
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "Gator",
+      "image": "https://i.pinimg.com/originals/6f/4d/fd/6f4dfd07ff7c1a1b4e8e1d8bb3ad2e78.jpg",
+      "likes": 0,
+      "id": 16
+    },
+    {
+      "name": "Pugs",
+      "image": "http://1.bp.blogspot.com/-eX0clJhvhlY/UKh_tXgMvCI/AAAAAAAABdg/8gFN2L69yUQ/s1600/Pug_Puppies.jpg",
+      "likes": 0,
+      "id": 19
     }
   ]
 }
