@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // div.append(img);
       // div.append(p);
       // div.append(button);
-      // could also do (much shorter way):
+
+      // could also do this(much shorter way):
       return `
       <div class="card">
       <h3 style="display:none">${toy.id}</h3>
@@ -109,26 +110,10 @@ function postSubmit(event) {
       <button class="delete-btn">Delete</button>
       </div>
       `
-    // const div = document.createElement('div');
-    // toyCollection.appendChild(div);
-    // div.id = "card";
-    // const h2 = document.createElement('h2');
-    // const img = document.createElement('img');
-    // const p = document.createElement('p');
-    // const button = document.createElement('button');
-    // h2.innerText = object.name;
-    // img.src = object.image;
-    // img.class = "toy-avatar";
-    // object['likes'] = 0;
-    // p.innerText = object.likes + " Likes";
-    // button.innerHTML = "Like";
-    // div.append(h2);
-    // div.append(img);
-    // div.append(p);
-    // div.append(button);
     toyCollection.innerHTML += newToy;
   });
   formSubmit.reset();
+  alert(`${toyName} is being added to the page`);
 };
 
 function increaseLikes(event) {
@@ -165,62 +150,20 @@ function increaseLikes(event) {
     body: JSON.stringify({
       "likes": `${int}`
     })
-  // .then(resp => resp.json())
-  // .then(function(object) {
-  //   const updatedToy = `
-  //     <div class="card">
-  //     <h3 style="display:none">${object.id}</h3>;
-  //     <h2>${object.name}</h2>
-  //     <img src=${object.image} class="toy-avatar">
-  //     <p>${object.likes} Likes</p>
-  //     <button class="like-btn">Like</button>
-  //     </div>
-  //     `
   });
 };
 
 function deleteToy(event) {
   let toyId = event.target.parentNode.querySelector('h3').innerText;
+  let toyName = event.target.parentNode.querySelector('h2').innerText;
   event.target.parentNode.remove()
-  // let toyName = event.target.parentNode.querySelector('h2').innerText;
-  // let toyImage = event.target.parentNode.querySelector('img').src;
-  // const likes = event.target.parentNode.querySelector('p').innerText;
-  // const newLikes = likes.replace(" Likes", "")
-  // const int = parseInt(newLikes) + 1;
-  // const intWithLikes = int + " Likes";
-  // event.target.parentNode.querySelector('p').innerText = intWithLikes;
+  alert(`${toyName} is being deleted from the page`);
 
-  // let formData = {
-  //   // id: toyId,
-  //   // name: toyName, 
-  //   // image: toyImage,
-  //   likes: intWithLikes
-  // }
-  
-  // let configObj = {
-  //   method: "Patch",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     "Accept": "application/json"
-  //   },
-  //   body: JSON.stringify(formData)
-  // };
   fetch(`http://localhost:3000/toys/${toyId}`, {
     method: "DELETE"
     // or you can add it down here instead...
     // .then(resp => {
     //   event.target.parentNode.remove();
     // })
-  // .then(resp => resp.json())
-  // .then(function(object) {
-  //   const updatedToy = `
-  //     <div class="card">
-  //     <h3 style="display:none">${object.id}</h3>;
-  //     <h2>${object.name}</h2>
-  //     <img src=${object.image} class="toy-avatar">
-  //     <p>${object.likes} Likes</p>
-  //     <button class="like-btn">Like</button>
-  //     </div>
-  //     `
   });
 };
